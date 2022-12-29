@@ -9,6 +9,7 @@
   "dependencies": {
     "cors": "^2.8.0",
     "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
     "express": "^4.12.4"
   },
   "repository": {
@@ -25,8 +26,5 @@
     "express",
     "freeCodeCamp"
   ],
-  "license": "MIT",
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  }
+  "license": "MIT"
 }
