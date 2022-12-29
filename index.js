@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-// your first API endpoint...
+// result endpoint...
 app.get('/api/:date?', function (req, res) {
   let { date } = req.params;
 
@@ -28,7 +28,9 @@ app.get('/api/:date?', function (req, res) {
   }
 
   if (!date.includes('-')) {
-    date = new Date(Number(date)).getTime();
+    date =
+      new Date(String(date)).getTime() ||
+      new Date(Number(String(date))).getTime();
   } else {
     date = new Date(date).getTime();
   }
